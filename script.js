@@ -46,30 +46,3 @@
       }
     }
 
-    var teaKettle = document.getElementById("teaKettle1"),
-  ctrl = document.getElementById("audioControl1"),
-  playButton = document.getElementById("play1"),
-  pauseButton = document.getElementById("pause1");
-teaKettle1.currentTime = 0;
-
-function toggleButton() {
-  if (playButton.style.display === "none") {
-    playButton.style.display = "block";
-    pauseButton.style.display = "none";
-  } else {
-    playButton.style.display = "none";
-    pauseButton.style.display = "block";
-  }
-}
-
-ctrl.onclick = function () {
-  if (teaKettle.paused) {
-    teaKettle.play();
-  } else {
-    teaKettle.pause();
-  }
-
-  toggleButton();
-
-  return false;
-};
